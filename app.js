@@ -10,6 +10,7 @@ class App {
             extended: true
         }));
         app.use(bodyParser.json());
+
         app.get('/', (req,res) => {
             res.send(response('server is running'));
         })
