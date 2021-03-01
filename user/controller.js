@@ -4,8 +4,8 @@ const UserModel = new model();
 
 class UserController {
     create(req, res) {        
-        let data = req.body;
-        if (data.fullname!=null && data.username!=null && data.email!=null && data.password!=null) {
+        let data = req.body;        
+        if (data.fullname!="" && data.username!="" && data.email!="" && data.password!="") {
             UserModel.create(data);
             res.send(response('Succesfully registered'));
         } else {            
